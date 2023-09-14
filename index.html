@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="都道府県各地の地酒を紹介するサイトです。日本地図から都道府県を選択していただくとその地域の地酒を見ることができます。"> <!-- サイトの概要 -->
+    <title>地酒MAP</title>
+    <meta name="format-detection" content="telephone=no"> <!-- 数字の並びを勝手に電話番号と解釈をしないようにするための指示 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- 表示領域を端末画面の幅に合わせている、初期のズーム倍率を1に設定している-->
+    <link rel="icon" href=""> <!-- サイトのアイコンのリンク先 -->
+    <link rel="stylesheet" href="stylesheet1.css"> <!-- stylesheet.cssを読み込む -->
+    <script>
+        function moveToPrefecture() {
+            var input = document.getElementById("prefecture-input").value;
+            var prefectureName = input.toLowerCase();
+
+            <!-- 都道府県名に応じたページにリダイレクトする -->
+            switch (prefectureName) {
+                case "北海道":
+                    window.location.href = "hokkaido.html";
+                    break;
+                case "青森":
+                    window.location.href = "aomori.html";
+                    break;
+                case "岩手":
+                    window.location.href = "iwate.html";
+                    break;
+                case "秋田":
+                    window.location.href = "akita.html";
+                    break;
+                case "宮城":
+                    window.location.href = "miyagi.html";
+                    break;
+                case "山形":
+                    window.location.href = "yamagata.html";
+                    break;
+                case "福島":
+                    window.location.href = "hukusima.html";
+                    break;
+                case "新潟":
+                    window.location.href = "nigata.html";
+                    break;
+                case "栃木":
+                    window.location.href = "totigi.html";
+                    break;
+                case "茨城":
+                    window.location.href = "ibaraki.html";
+                    break;
+                case "千葉":
+                    window.location.href = "tiba.html";
+                    break;
+                case "神奈川":
+                    window.location.href = "kanagawa.html";
+                    break;
+                case "東京":
+                    window.location.href = "tokyo.html";
+                    break;
+                case "埼玉":
+                    window.location.href = "saitama.html";
+                    break;
+                case "群馬":
+                    window.location.href = "gunnma.html";
+                    break;
+                case "長野":
+                    window.location.href = "nagano.html";
+                    break;
+                case "山梨":
+                    window.location.href = "yamanasi.html";
+                    break;
+                case "静岡":
+                    window.location.href = "sizuoka.html";
+                    break;
+                case "富山":
+                    window.location.href = "toyama.html";
+                    break;
+                case "石川":
+                    window.location.href = "isikawa.html";
+                    break;
+                case "岐阜":
+                    window.location.href = "gihu.html";
+                    break;
+                case "愛知":
+                    window.location.href = "aiti.html";
+                    break;
+                case "福井":
+                    window.location.href = "hukui.html";
+                    break;
+                case "三重":
+                    window.location.href = "mie.html";
+                    break;
+                case "滋賀":
+                    window.location.href = "siga.html";
+                    break;
+                case "京都":
+                    window.location.href = "kyoto.html";
+                    break;
+                case "奈良":
+                    window.location.href = "nara.html";
+                    break;
+                case "大阪":
+                    window.location.href = "oosaka.html";
+                    break;
+                case "和歌山":
+                    window.location.href = "wakayama.html";
+                    break;
+                case "兵庫":
+                    window.location.href = "hyogo.html";
+                    break;
+                case "鳥取":
+                    window.location.href = "tottori.html";
+                    break;
+                case "岡山":
+                    window.location.href = "okayama.html";
+                    break;
+                case "島根":
+                    window.location.href = "simane.html";
+                    break;
+                case "広島":
+                    window.location.href = "hirosima.html";
+                    break;
+                case "山口":
+                    window.location.href = "yamaguti.html";
+                    break;
+                case "香川":
+                    window.location.href = "kagawa.html";
+                    break;
+                case "徳島":
+                    window.location.href = "tokusima.html";
+                    break;
+                case "高知":
+                    window.location.href = "kouti.html";
+                    break;
+                case "愛媛":
+                    window.location.href = "ehime.html";
+                    break;
+                case "福岡":
+                    window.location.href = "hukuoka.html";
+                    break;
+                case "佐賀":
+                    window.location.href = "saga.html";
+                    break;
+                case "長崎":
+                    window.location.href = "nagasaki.html";
+                    break;
+                case "大分":
+                    window.location.href = "ooita.html";
+                    break;
+                case "熊本":
+                    window.location.href = "kumamoto.html";
+                    break;
+                case "宮崎":
+                    window.location.href = "miyazaki.html";
+                    break;
+                case "鹿児島":
+                    window.location.href = "kagosima.html";
+                    break;
+                case "沖縄":
+                    window.location.href = "okinawa.html";
+                    break;
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1 style="text-align:center">地酒MAP</h1>
+    日本地図から都道府県名を押すと各都道府県の地酒が紹介されます。<br>
+    都道府県を入力してください<br>
+    <input type="text" id="prefecture-input" placeholder="都道府県名を入力"> <!-- 都道府県検索機能 -->
+    <button onclick="moveToPrefecture()">検索</button>
+
+    <div style="text-align: center">
+        <img src="image_map.png" usemap="#image-map"> <!-- 使用する画像のソース -->
+    </div>
+    <map name="image-map"> <!-- クリッカブルマップの作成　-->
+        <area target="" alt="北海道" title="北海道" href="hokkaido.html"
+            coords="520,28,508,131,470,131,477,149,455,167,465,199,468,229,484,210,506,207,472,181,483,167,495,179,519,163,577,193,613,148,661,132,646,110,685,66,700,63,764,5,743,-2,699,55,674,59,643,106,635,95,648,76,627,95,598,91"
+            shape="poly">
+        <area target="" alt="青森" title="青森" href="aomori.html" coords="501,223,462,272,522,274" shape="poly">
+        <area target="" alt="岩手" title="岩手" href="iwate.html" coords="526,272,542,313,536,341,498,348,498,287"
+            shape="poly">
+        <area target="" alt="秋田" title="秋田" href="akita.html" coords="498,274,493,345,462,336,466,275" shape="poly">
+        <area target="" alt="宮城" title="宮城" href="miyagi.html" coords="493,347,522,357,501,396,482,394,493,375"
+            shape="poly">
+        <area target="" alt="山形" title="山形" href="yamagata.html"
+            coords="461,339,490,353,486,379,475,403,454,399,465,382,452,367" shape="poly">
+        <area target="" alt="福島" title="福島" href="hukusima.html"
+            coords="482,396,504,400,508,427,501,447,482,447,473,436,444,445,440,421,457,423,457,406,482,410"
+            shape="poly">
+        <area target="" alt="新潟" title="新潟" href="nigata.html"
+            coords="450,368,459,381,450,398,451,417,433,419,439,447,428,444,423,455,411,444,392,455,385,451,381,447,403,435,418,424,425,402,443,394"
+            shape="poly">
+        <area target="" alt="栃木" title="栃木" href="totigi.html"
+            coords="464,439,477,444,476,466,459,476,447,476,450,464,444,462,447,451" shape="poly">
+        <area target="" alt="茨城" title="茨城" href="ibaraki.html" coords="480,449,497,449,501,495,469,492,458,483,480,470"
+            shape="poly">
+        <area target="" alt="千葉" title="千葉" href="tiba.html" coords="465,492,501,503,486,534,466,546,473,514"
+            shape="poly">
+        <area target="" alt="神奈川" title="神奈川" href="kanagawa.html" coords="436,510,433,527,455,524,459,514"
+            shape="poly">
+        <area target="" alt="東京" title="東京" href="tokyo.html" coords="430,500,436,509,461,512,469,507,466,499,455,506"
+            shape="poly">
+        <area target="" alt="埼玉" title="埼玉" href="saitama.html"
+            coords="421,494,428,500,433,495,451,502,465,500,457,483,439,482" shape="poly">
+        <area target="" alt="群馬" title="群馬" href="gunnma.html"
+            coords="433,447,441,450,441,465,446,465,441,465,446,465,443,473,446,479,435,477,429,486,419,493,417,475,411,472,410,464,419,458,425,458"
+            shape="poly">
+        <area target="" alt="長野" title="長野" href="nagano.html"
+            coords="386,458,411,447,415,457,407,462,407,473,414,476,419,498,401,495,399,509,393,513,394,523,385,530,376,530,379,518,371,504,378,493,379,476"
+            shape="poly">
+        <area target="" alt="山梨" title="山梨" href="yamanasi.html"
+            coords="403,498,428,502,432,509,430,520,415,519,410,530,403,523" shape="poly">
+        <area target="" alt="静岡" title="静岡" href="sizuoka.html"
+            coords="399,513,396,526,376,551,379,558,397,559,419,536,425,540,422,559,428,560,435,545,430,523,418,524,410,534,401,526"
+            shape="poly">
+        <area target="" alt="富山" title="富山" href="toyama.html"
+            coords="374,447,381,461,375,471,356,469,351,476,346,475,349,450,360,458" shape="poly">
+        <area target="" alt="石川" title="石川" href="isikawa.html"
+            coords="364,419,343,428,340,435,342,453,321,477,339,487,343,480,346,458,346,448,353,447,350,437"
+            shape="poly">
+        <area target="" alt="岐阜" title="岐阜" href="gihu.html"
+            coords="374,476,374,490,367,500,372,515,374,526,358,530,349,520,340,523,336,534,329,529,325,512,336,508,347,505,343,493,346,479,361,475"
+            shape="poly">
+        <area target="" alt="愛知" title="愛知" href="aiti.html" coords="347,523,356,531,381,535,364,564,346,554,339,536"
+            shape="poly">
+        <area target="" alt="福井" title="福井" href="hukui.html"
+            coords="318,479,338,491,342,499,331,505,324,510,318,510,310,518,302,523,289,520,309,512,322,498,316,488"
+            shape="poly">
+        <area target="" alt="三重" title="三重" href="mie.html"
+            coords="327,530,338,541,331,560,340,566,339,577,325,577,317,585,317,593,310,603,311,603,306,599,316,589,316,574,321,567,314,564,317,554,328,550"
+            shape="poly">
+        <area target="" alt="滋賀" title="滋賀" href="siga.html"
+            coords="321,511,327,526,324,529,325,547,314,554,306,544,309,535,303,526" shape="poly">
+        <area target="" alt="京都" title="京都" href="kyoto.html"
+            coords="281,506,286,521,306,536,302,544,311,555,303,555,299,548,288,539,274,528,275,517,268,512"
+            shape="poly">
+        <area target="" alt="奈良" title="奈良" href="nara.html"
+            coords="306,558,313,558,306,560,311,565,317,568,313,573,313,587,304,597,296,596,296,576" shape="poly">
+        <area target="" alt="大阪" title="大阪" href="oosaka.html" coords="285,541,302,557,295,572,277,575,286,568,293,560"
+            shape="poly">
+        <area target="" alt="和歌山" title="和歌山" href="wakayama.html"
+            coords="292,576,293,599,309,605,303,613,286,614,273,594,275,578" shape="poly">
+        <area target="" alt="兵庫" title="兵庫" href="hyogo.html"
+            coords="246,511,264,509,271,518,270,533,282,540,288,555,273,560,267,576,260,580,257,576,273,560,260,552,248,554,241,551,241,542,255,527"
+            shape="poly">
+        <area target="" alt="鳥取" title="鳥取" href="tottori.html"
+            coords="244,512,250,527,238,531,231,524,223,529,217,522,202,536,198,534,208,519,228,519" shape="poly">
+        <area target="" alt="岡山" title="岡山" href="okayama.html"
+            coords="244,533,237,541,239,555,226,566,209,563,203,537,217,524,221,533,230,527,237,534" shape="poly">
+        <area target="" alt="島根" title="島根" href="simane.html"
+            coords="194,511,202,522,195,533,185,531,173,542,174,545,159,545,154,551,148,559,149,566,141,569,141,563,137,562,137,551,159,540,173,537,173,524,180,516"
+            shape="poly">
+        <area target="" alt="広島" title="広島" href="hirosima.html"
+            coords="185,534,201,538,206,566,176,576,167,567,155,574,151,560,161,548,176,548" shape="poly">
+        <area target="" alt="山口" title="山口" href="yamaguti.html"
+            coords="134,555,134,564,138,565,138,572,149,569,156,586,149,591,137,582,115,586,109,579,102,584,104,562,119,565"
+            shape="poly">
+        <area target="" alt="香川" title="香川" href="kagawa.html"
+            coords="213,587,223,584,228,587,234,580,244,580,237,572,226,573" shape="poly">
+        <area target="" alt="徳島" title="徳島" href="tokusima.html"
+            coords="252,581,255,597,239,611,230,597,223,599,216,593,221,586,228,589,235,581" shape="poly">
+        <area target="" alt="高知" title="高知" href="kouti.html"
+            coords="213,596,221,602,227,599,238,614,234,624,224,613,216,610,195,620,188,635,181,646,172,643,172,629,185,614,195,599"
+            shape="poly">
+        <area target="" alt="愛媛" title="愛媛" href="ehime.html"
+            coords="169,637,169,628,192,599,212,595,212,592,192,592,184,581,158,611,163,621" shape="poly">
+        <area target="" alt="福岡" title="福岡" href="hukuoka.html"
+            coords="102,586,108,603,95,613,95,624,91,621,82,628,83,610,69,603,73,595" shape="poly">
+        <area target="" alt="佐賀" title="佐賀" href="saga.html" coords="60,603,80,610,79,625,69,620,69,629,62,625,57,613"
+            shape="poly">
+        <area target="" alt="長崎" title="長崎" href="nagasaki.html"
+            coords="46,607,54,613,60,626,68,632,75,639,75,647,66,649,53,636,46,628" shape="poly">
+        <area target="" alt="大分" title="大分" href="ooita.html"
+            coords="97,625,102,629,104,622,108,622,115,632,116,639,126,643,130,644,134,639,140,644,144,636,134,622,119,622,133,613,134,606,127,600,123,606,112,602,112,607,108,606,98,614"
+            shape="poly">
+        <area target="" alt="熊本" title="熊本" href="kumamoto.html"
+            coords="105,624,115,640,102,651,100,658,104,665,102,673,90,675,84,669,77,671,86,653,83,639,80,633,91,624,104,633"
+            shape="poly">
+        <area target="" alt="宮崎" title="宮崎" href="miyazaki.html"
+            coords="116,642,129,646,134,642,137,647,118,687,118,700,113,711,108,709,107,697,102,697,91,678,104,675,107,665,102,658,107,651"
+            shape="poly">
+        <area target="" alt="鹿児島" title="鹿児島" href="kagosima.html"
+            coords="66,673,84,673,100,700,105,700,105,708,98,711,102,716,86,729,91,715,84,705,93,698,83,690,77,709,83,719,77,721,66,712,72,698,76,682,66,685"
+            shape="poly">
+        <area target="" alt="沖縄" title="沖縄" href="okinawa.html"
+            coords="577,665,583,672,558,694,554,708,544,714,544,704,548,693,563,682,554,680,559,675,565,679"
+            shape="poly">
+    </map>
+    <!--　レスポンシブル対策　-->
+    <script arc="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquwry.rwdImageMaps.min.js"></script>
+    <script>
+        $(function () {
+            $('img[usemap]').rwdImageMaps();
+        })
+    </script>
+
+</body>
+
+</html>

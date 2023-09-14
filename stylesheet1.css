@@ -1,0 +1,89 @@
+h1 {
+    font-size: 50px;
+    font-family: 游明朝
+}
+
+p1 {
+    font-size: 20px
+}
+
+dt {
+    font-family: 游明朝
+}
+
+.ac-parent {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #babade;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.ac-parent:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    /*横線*/
+    width: 24px;
+    height: 2px;
+    background: #fff;
+}
+
+.ac-parent:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    /* 8px+12px-1px(幅2pxの半分) */
+    right: 19px;
+    transform: translateY(-50%);
+    transition: all .3s;
+    /*縦線*/
+    width: 2px;
+    height: 24px;
+    background: #fff;
+}
+
+.ac-parent.open:after {
+    top: 25%;
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+
+.ac-child__item {
+    position: relative;
+    padding: 1em;
+    border-bottom: 1px solid #fff;
+    background-color: #fcf8dd;
+    cursor: pointer;
+}
+
+.ac-child__item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: 16px;
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px #333;
+    border-right: solid 2px #333;
+    transform: translateY(-50%);
+    transform: rotate(135deg);
+    transition: all .3s;
+}
+
+.ac-child__description {
+    padding: 1em;
+    background-color: #bfba95;
+}
+
+.ac-child__item.open:after {
+    top: 50%;
+    transform: rotate(315deg);
+}
