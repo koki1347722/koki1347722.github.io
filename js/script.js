@@ -1,3 +1,5 @@
+// 制作実習Ⅱ 第2期プログラム
+// author 0J03013 岸本昂己
 $(function () {
     // 上層メニューの制御
     $('.ac-child').css("display", "none");
